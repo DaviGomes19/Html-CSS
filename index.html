@@ -5,16 +5,189 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="favicon" href="estrela.png">
     <title>Projeto html-css</title>
+    <style>
+        :root {
+            --preto: #1a1a1a;
+            --cinza-escuro: #2b2b2b;
+            --amarelo: #f5c518;
+            --branco: #f7f7f7;
+            --cinza-claro: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: var(--branco);
+            color: var(--preto);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--preto);
+            color: var(--branco);
+            padding: 24px 32px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: var(--amarelo);
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--branco);
+            text-decoration: none;
+            font-weight: 600;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            border-color: var(--amarelo);
+        }
+
+        main, section {
+            padding: 40px 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: var(--preto);
+            border-left: 6px solid var(--amarelo);
+            padding-left: 12px;
+            margin-bottom: 20px;
+        }
+
+        section > article {
+            background-color: var(--cinza-claro);
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+        }
+
+        article h3 {
+            margin-top: 0;
+            color: var(--preto);
+        }
+
+        article a {
+            display: inline-block;
+            margin-top: 8px;
+            background-color: var(--preto);
+            color: var(--amarelo);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+
+        article a:hover,
+        article a:focus {
+            background-color: var(--cinza-escuro);
+        }
+
+        #inscricao {
+            background-color: var(--cinza-escuro);
+            color: var(--branco);
+            border-radius: 8px;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        #inscricao h2 {
+            color: var(--amarelo);
+            border-left-color: var(--amarelo);
+        }
+
+        fieldset {
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 20px 24px;
+        }
+
+        legend {
+            padding: 0 8px;
+            font-weight: 600;
+            color: var(--amarelo);
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            max-width: 320px;
+            padding: 8px 10px;
+            border-radius: 4px;
+            border: 1px solid #555;
+            font-size: 1rem;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin-right: 6px;
+        }
+
+        button[type="submit"] {
+            background-color: var(--amarelo);
+            color: var(--preto);
+            border: none;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: opacity 0.2s ease;
+        }
+
+        button[type="submit"]:hover,
+        button[type="submit"]:focus {
+            opacity: 0.85;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            main, section, #inscricao {
+                padding: 24px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <head>
+    <header>
         <h1>Star Academy ⭐</h1>
         <nav>
             <a href="contato.html" target="_blank" rel="external">Contatos</a>
             <a href="sobre.html" target="_blank" rel="external">Sobre</a>
             <a href="aulas_experimentais.html" target="_blank" rel="external">Aulas-Experimentais</a>
         </nav>
-    </head>
+    </header>
     <main>
         <section>
             <h2>Sobre a Academia</h2>
